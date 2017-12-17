@@ -12,12 +12,43 @@ class Node {
 
 class BST {
 
-    public static Node createNewNode(int k) {
+    private static Node createNewNode(int k) {
         Node a = new Node();
         a.data = k;
         a.left = null;
         a.right = null;
         return a;
+    }
+
+    private static int leftCount = 0;
+    private static int rightCount = 0;
+
+    public static int countLeftNodes(Node node) {
+        if (node == null)
+            return 0;
+
+        if (node.left != null) {
+            leftCount += node.left.data;
+            countLeftNodes(node.left);
+        }
+        if (node.right != null) {
+            countLeftNodes(node.right);
+        }
+        return leftCount;
+    }
+
+    public static int countRightNodes(Node node) {
+        if (node == null)
+            return 0;
+
+        if (node.left != null) {
+            countRightNodes(node.left);
+        }
+        if (node.right != null) {
+            rightCount += node.right.data;
+            countRightNodes(node.right);
+        }
+        return rightCount;
     }
 
     public static Node insertNode(Node node, int val) {
@@ -53,6 +84,11 @@ public class BSTApp {
 
 //        a.printTree(root);
 
+        //int sum = a.countLeftNodes(root);
+        //System.out.println("Sum of Left Children: " + sum);
+
+        System.out.println("Left Count: " + a.countLeftNodes(root));
+        System.out.println("Right Count: " + a.countRightNodes(root));
     }
 
 

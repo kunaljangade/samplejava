@@ -133,7 +133,7 @@ class LinkedList {
 
 
 
-        /*int count = 1;
+        /*int leftCount = 1;
         if (node == null) {
             System.out.println(0);
             return 0;
@@ -142,9 +142,9 @@ class LinkedList {
         Node tmp = node;
         while (tmp.next != null) {
             tmp = tmp.next;
-            count++;
+            leftCount++;
         }
-        return count;*/
+        return leftCount;*/
     }
 
     public boolean ifNodeExists(Node node, int val) {
@@ -290,7 +290,7 @@ public class SinglyLinkedList {
         LinkedList list = new LinkedList();
 
 
-//        root = list.insertAtPosition(4, 1, root);
+        //root = list.insertAtPosition(4, 1, root);
 //        root = list.insert(10, root);
         root = list.insert(33, root);
         root = list.insert(27, root);
@@ -334,15 +334,15 @@ public class SinglyLinkedList {
         /*root = list.rotateAntiClockwise(root, 2);
         list.printList(root);*/
 
-        /*root = list.reverse(root);
-        list.printList(root);*/
+        root = list.reverse(root);
+        list.printList(root);
 
         /*root = list.middleNode(root);
         System.out.println(root.i);
 //        list.printList(root);*/
 
-        Node sortedList = list.mergeSort(root);
+        /*Node sortedList = list.mergeSort(root);
         System.out.println("Sorted List:");
-        list.printList(sortedList);
+        list.printList(sortedList);*/
     }
 }

@@ -45,8 +45,8 @@ public class mainClass {
         /*BubbleSort array = new BubbleSort();
         array.bubbleSort(arr);*/
 
-        QuickSort array = new QuickSort();
-        array.sort(arr);
+        HackerQuickSort array = new HackerQuickSort();
+        array.quickSort(arr);
         ArrayRotate.print(arr);
 
 
