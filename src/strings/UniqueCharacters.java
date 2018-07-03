@@ -5,7 +5,7 @@ public class UniqueCharacters {
         String str1 = "my first code";
         String str2 = "my my";
 
-        System.out.println(uniqueChars(str1));
+        System.out.println(uniqueChars(str2));
     }
 
     public static boolean uniqueChars(String str) {
